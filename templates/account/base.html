@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+    <title>DJANGO PAD</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="generator" content="djangocn.com" />
+    <meta name="keywords" content="django,djangocn,python,web" />
+
+    <link href="/medias/css/wiki_simple.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+
+<!-- Heading -->
+<div id="header">
+    <div id='topbar'>
+    <span class='function-link'>
+        <a href="/wiki/Start">首页</a>
+        {% comment %}
+        <a href="/wiki/history/{{ title }}">历史</a>
+        {% if user.is_anonymous %}
+        <a href="/accounts/login/">登入</a>
+        {% else %}
+        <a href="/accounts/logout/">登出</a>
+        {% endif %}
+        {% endcomment %}
+
+    </span>
+    </div>
+    <div id="logo">
+    </div>
+</div>
+
+{% block main %}{% endblock %}
+
+<div id="footer">
+    <a href="http://www.djangoproject.com/"><img src="/medias/images/djangosite80x15_grey.gif" border="0" alt="A Django site." title="A Django site." /></a>
+</div>
+</body>
+</html>

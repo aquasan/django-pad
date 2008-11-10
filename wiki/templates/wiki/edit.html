@@ -1,0 +1,31 @@
+{% extends "wiki/base.html" %}
+
+{% block main %}
+
+
+<!-- Main Column -->
+<div id="main">
+
+    {% if preview %}
+    <div class='content'>
+    {{ preview|safe }}
+    </div>
+    {% endif %}
+
+    {% if msg %}
+    <div class='msg'>{{ msg }}</div>
+    {% endif %}
+
+    <form enctype="multipart/form-data" action="/wiki/edit/{{ title }}/" method="POST">
+        <textarea name="content" id='input_content'>{{ content|safe }}</textarea>
+        <input type="hidden" name="last" value="{{ last }}"/>
+
+        <div>
+            <input type="submit" value="修改" accesskey='s' />
+            <span class='topic'><a href='/wiki/{{ title }}/'>Back to {{ title }}</a></span>
+        </div>
+    </form>
+
+</div>
+
+{% endblock %}

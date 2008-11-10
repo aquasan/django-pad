@@ -1,0 +1,103 @@
+
+a:link{color:#999999;}
+a:visited{color:#999999;}
+a:active{color:#000000;}
+a:hover{color:#000000;}
+
+pre{
+	color:#777777;
+	border: 1px solid #eeeeee;
+	background-color: #FFFFef;
+}
+
+
+h1,h2,h3,h4,h5,h6{padding:0px;margin:0px;}
+
+.function-link {margin-right:3px;}
+.function-link a:link {color:#000000;}
+.function-link a:active {color:#666666;}
+.function-link a:visited {color:#000000;}
+.function-link a:hover{color:#666666;text-decoration:none;}
+
+
+
+body,html{
+	background-color:#ffffff;
+	color:#000000;
+}
+
+
+#topbar{
+    text-align:right;
+    border: 1px solid #999;
+    background-color:#cccccc;
+    margin-bottom: 10px;
+}
+
+
+
+#main{
+    margin-top:30px;
+    background:#ffffff;
+}
+
+#main .topic{
+    text-align:center;
+    font-weight:bold;
+    font-size:20px;
+}
+
+#main .history{
+    margin:0px 0px 10px 0px;
+}
+
+#main .history .list{
+    border: 1px solid #999;
+    width: 116px;
+    padding:5px;
+}
+
+#main .history div div {
+    position:relative;
+    text-align:right;
+    float:left;
+    width: 50px;
+    height:20px;
+    padding:0px 2px 0px 2px;
+}
+
+#main .history .compare{
+    position:relative;
+    border: 1px solid #999;
+    width: 116px;
+    padding:2px;
+}
+
+#main .content{
+    margin:0px 0px 10px 0px;
+}
+
+#main .msg{
+    border: 1px solid #999;
+    color:#fff;
+    background-color:#fc0;
+}
+
+#main #input_content{
+    margin:3px 0px 0px 0px;
+    width:80%;
+    height:350px;
+}
+
+.float{float:right;}
+
+.small{font-size: 12px;}
+
+.posted{
+    color:#999;
+    margin:20px 0px 5px 0px;
+}
+
+#footer{
+	margin-top: 10px;
+}

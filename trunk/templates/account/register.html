@@ -1,0 +1,59 @@
+{% extends "wiki/base.html" %}
+{% block main %}
+
+
+<div id="main">
+
+    <br />
+
+    <form id="SignUp" name="SignUp" action="/auth/register/" method="post">
+
+        {% if form.has_errors %}
+            <p> please check errors...</p>
+            <p> {{ errors|pluralize }} </p>
+        {% endif %}
+
+
+        <br />
+
+        <div class="fieldcontrol">
+            <label for="id_username">用户名：　</label>
+            {{ form.username }}
+            {% if form.username.errors %} {{ form.username.errors|join:", " }}{% endif %}
+        </div>
+
+        <div class="fieldcontrol">
+            <label for="id_email">电子邮件：</label>
+            {{ form.email }}
+            {% if form.email.errors %} {{ form.email.errors|join:", " }}{% endif %}
+        </div>
+
+
+        <br />
+
+
+        <div class="fieldcontrol">
+            <label for="id_password">密码：　　</label>
+            {{ form.password }}
+            {% if form.password.errors %} {{ form.password.errors|join:", " }}{% endif %}
+        </div>
+
+
+        <div class="fieldcontrol">
+            <label for="id_verifyPassword">重新输入：</label>
+            {{ form.verifyPassword }}
+            {% if form.verifyPassword.errors %} {{ form.verifyPassword.errors|join:", " }}{% endif %}
+        </div>
+
+
+        <br/>
+
+        <div class="fieldcontrol">
+            <button type="submit" name="submit" id="submit" />提交</button>
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock    %}

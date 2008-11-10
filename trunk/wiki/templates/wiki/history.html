@@ -1,0 +1,54 @@
+{% extends "wiki/base.html" %}
+
+{% block main %}
+
+<!-- Main Column -->
+<div id="main">
+
+    <div class='history'>
+    {% for i in range %}
+    <a href="/wiki/history/{{title}}/{{i}}/">{{ i }}</a>
+    {% endfor %}
+    </div>
+
+    <div class='content'>
+    {{ content|safe }}
+    </div>
+    
+    <!--div class='history'>
+    {% for i in range %}
+    <a href="/wiki/history/{{title}}/{{i}}/">{{ i }}</a>
+    {% endfor %}
+    </div-->
+    
+    <!--form method='post'>
+
+        <div class='list'>
+          <div>
+            <input type='radio' name='id1' value='2' class='float' />
+            <input type='radio' name='id2' value='2' class='float' />
+          </div>
+          <div>2</div>
+          <div>
+            <input type='radio' name='id1' value='1' class='float' />
+            <input type='radio' name='id2' value='1' class='float' />
+          </div>
+          <div>1</div>
+          <div>
+            <input type='radio' name='id1' value='1' class='float' />
+            <input type='radio' name='id2' value='1' class='float' />
+          </div>
+          <div>1</div>
+        <input class='compare' type='submit' value='比较' />
+
+        </div>
+    </form-->
+
+</div>
+<!-- Main Column Ends -->
+
+<!-- Button<div id="bottom"></div>-->
+
+<!-- Sidebar -->
+
+{% endblock %}

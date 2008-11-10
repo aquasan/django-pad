@@ -1,0 +1,39 @@
+
+{% extends "account/base.html" %}
+{% block main %}
+
+<div id="main">
+    {% if form.has_errors %}
+    <p>请检查...</p>    
+    {% endif %}
+
+    <form id="login" name="login" method="post">
+        <div class="fieldcontrol">
+            <label for="id_username">用户名：</label>
+            {{ form.username }}
+            {% if form.username.errors %}
+            {% comment %}
+            {{ form.username.errors|join:", " }}
+            {% endcomment %}
+            输入不正确
+            {% endif %}
+        </div>
+
+        <div class="fieldcontrol">
+            <label for="id_password">密码　：</label>
+            {{ form.password }}
+            {% if form.password.errors %}
+            {% comment %}
+            {{ form.password.errors|join:", " }}
+            {% endcomment %}
+            输入不正确
+            {% endif %}
+        </div><br />
+
+        <div class="fieldcontrol">
+            <button type="submit" name="submit" id="submit">登录</button>
+        </div>
+    </form>
+
+</div>
+{% endblock %}
